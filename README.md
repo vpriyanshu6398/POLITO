@@ -36,13 +36,6 @@ The browser code is split into feature-focused files in `js/` and loaded in orde
 
 These are regular scripts, not modules, so keep their order in `index.html`; later files use shared functions and data declared by earlier files. The split preserves the existing features and behavior.
 
-
-## Local constituency map data
-The Constituencies map now loads `data/up-constituencies.geojson` locally, converted from the uploaded `S24_AC` shapefile set. The data contains 403 polygon features. Keep the three source files together if you need to reconvert: `.shp`, `.shx`, `.dbf`. Your Overview glowing map remains linked to `images/up-map.png`; copy your existing local image into that folder if it is not included in this ZIP.
-
-## Uttar Pradesh Assembly results
-The Elections page's Uttar Pradesh Assembly Results view includes 2017 and 2022 party charts and result tables. The 2017 candidate dataset is fetched from [DeepakKumarGS/UP-Election-Analysis](https://github.com/DeepakKumarGS/UP-Election-Analysis/blob/master/up_res.csv); its source party labels include alliance groupings. The 2017 dashboard also displays the statewide turnout figure of 61.11% reported in Election Commission of India election statistics. Assembly constituency profiles include 2017 and 2022 Assembly candidate results, followed by segment-wise 2024 and 2019 Lok Sabha results. Verify historical figures against Election Commission records before publication.
-
 ## Uttar Pradesh Parliamentary Results
 The Elections page's Uttar Pradesh Parliamentary Results view switches between 2019 and 2024 statewide party tallies and links to same-year Assembly segment results. The 2019 party figures are aggregated from `data/up-lok-sabha-2019-candidates.csv`; seat totals use the highest-vote candidate in each parliamentary constituency, and vote shares exclude NOTA. As in the 2024 summary, the 2019 party-wise table highlights seven main parties rather than listing every party. Segment results for 2019 and 2024 use `data/up-lok-sabha-2019-segments.csv` and `data/up-lok-sabha-2024-segments.csv`, respectively, and show the leading candidate, runner-up, votes, margin, and party lead totals across 403 segments. Verify historical figures against Election Commission records before publication.
 
@@ -54,8 +47,6 @@ The global search supports Assembly and Parliamentary Constituencies, districts,
 The Elections page's local-government card opens a shared results panel for Nagar Nigam and Nagar Palika Parishad (2023) and Gram Panchayat Pradhan (2021). The municipal views retrieve official declared winners from the Uttar Pradesh State Election Commission (SEC). Gram Panchayat uses the supplied Parquet-derived 2021 candidate dataset because the SEC lookup can return no data for district/block selections. The supplied dataset covers 67 of the expected 75 districts and includes candidate names and winner/runner-up labels, but not vote counts. Search matches candidates, Panchayats, blocks, and districts across the entire dataset before pagination; choose a district and optionally a block to narrow the search. Gram Panchayat results can also be filtered to winners, runner-up candidates, or other candidates. Results are returned 100 records per page. Use the official SEC link to consult its Panchayat results independently.
 
 The urban local-body view displays winner, party, vote, turnout, reservation, ward, and local-body fields while excluding personal contact and demographic details. The SEC publishes declared winners, not a complete list of losing candidates. The Node server must be running (`npm start`) to load the municipal SEC results and the packaged Gram Panchayat data; opening `index.html` directly cannot load these results.
-
-Official sources: the SEC [2023 urban local-body winner list](https://sec.up.nic.in/site/NewWinnerList2023.aspx) and [2021 Panchayat winner list](https://sec.up.nic.in/site/WinnerListPRI2021.aspx). The SEC notes that its Panchayat list is for public convenience and that the signed list supplied by the election officer is authoritative.
 
 ## District scorecards
 Search a district in the Constituencies page's white search box to find its 2022 Assembly scorecard. The dropdown previews party seat counts, and selecting the district opens a breakdown of each Assembly constituency, winner, votes, and margin. District membership comes from `data/up-constituencies.geojson`; 2022 candidate results are loaded from the linked Assembly results CSV.
