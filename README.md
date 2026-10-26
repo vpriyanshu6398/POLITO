@@ -6,10 +6,7 @@ Responsive frontend concept for POLITO — India's Own Political Data Center.
 1. Extract this folder.
 2. Open `index.html` in a modern browser, or run the local preview server from the runnable package.
 3. The map requires an internet connection because it loads Leaflet and public GeoJSON boundary data.
-
-## Interactive Assembly map
-The hero now uses Leaflet and attempts to load the public 403-seat Uttar Pradesh Assembly boundary dataset from `https://indiastats.org/geojson/uttar-pradesh-assemblies.json`. Constituency polygons can be hovered, searched, zoomed and clicked to open a POLITO profile preview. If that source is unavailable or blocks browser access, the panel shows a clear fallback link to the official Uttar Pradesh Legislative Assembly map: https://www.upvidhansabhaproceedings.gov.in/by-map.
-
+   
 ## Important data note
 Election results are loaded from the sources identified in the page/profile notes and have not yet been independently verified against the Election Commission of India. Check source licensing and constituency-name/number fields before production deployment.
 
