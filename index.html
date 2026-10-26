@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101a2d" />
+  <title>POLITO — India's Own Political Data Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topline"><span class="live-dot"></span> UTTAR PRADESH POLITICAL DATA HUB <span class="topline-right">PHASE 01 · UTTAR PRADESH</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="POLITO home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span class="brand-copy"><strong>POLITO</strong><small>INDIA'S OWN POLITICAL DATA CENTER</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="#overview" data-route="overview">Overview</a>
+      <a href="#elections" data-route="elections">Elections</a>
+      <a href="#constituencies" data-route="constituencies">Constituencies</a>
+      <a href="#predictions" data-route="predictions">2027 Forecast</a>
+      <a href="#forum" data-route="forum">Forum</a>
+    </nav>
+    <button class="header-search" id="focusSearch"><span>⌕</span> <span>Search POLITO</span><kbd>⌘ K</kbd></button>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-grid"></div>
+      <div class="hero-layout">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span> POLITICS, EXPLAINED WITH DATA</div>
+          <h1>Every constituency.<br><em>Every election.</em><br>One platform.</h1>
+          <p>Explore Uttar Pradesh's political landscape through election results, constituency profiles, local issues and data-led analysis.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="#elections">Explore election data <span>↗</span></a>
+            <a class="btn btn-outline" href="#constituencies">Find a constituency <span>⌕</span></a>
+          </div>
+          <div class="hero-footnote"><span class="shield">✓</span> Source-led research <span class="foot-sep">·</span> Clear methodology <span class="foot-sep">·</span> Independent analysis</div>
+        </div>
+        <div class="hero-visual custom-map-visual">
+          <div class="visual-top"><span>UP POLITICAL LANDSCAPE</span><span class="mini-live"><i></i> DATA EXPLORER</span></div>
+          <div class="custom-map-frame">
+            <img class="custom-up-map" src="images/up-map.png" alt="Glowing outline map of Uttar Pradesh">
+          </div>
+          <div class="visual-bottom">
+            <div><span class="stat-label">ASSEMBLY CONSTITUENCIES</span><strong>403</strong></div>
+            <div><span class="stat-label">LOK SABHA SEATS</span><strong>80</strong></div>
+            <div><span class="stat-label">NEXT ASSEMBLY ELECTION</span><strong>2027</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview-context" id="overview-context">
+      <div class="overview-context-head">
+        <div><span class="section-kicker">YOUR GUIDE TO UTTAR PRADESH</span><h2>Explore politics beyond the headlines.</h2><p>Start with election outcomes, explore the people’s constituencies, or compare possible scenarios for 2027.</p></div>
+        <div class="context-stamp"><span class="stamp-dot"></span> PHASE 01 <b>UTTAR PRADESH</b></div>
+      </div>
+      <div class="overview-stats">
+        <article class="overview-stat"><span class="overview-stat-icon">▦</span><div><strong>403</strong><b>Assembly constituencies</b><small>Explore seat-level results and profiles</small></div></article>
+        <article class="overview-stat"><span class="overview-stat-icon gold">▤</span><div><strong>80</strong><b>Lok Sabha constituencies</b><small>Understand parliamentary contests</small></div></article>
+        <article class="overview-stat"><span class="overview-stat-icon green">↗</span><div><strong>2027</strong><b>Next Assembly election</b><small>Forecasts are scenarios, not certainties</small></div></article>
+      </div>
+      <div class="overview-paths-head"><h3>Where would you like to begin?</h3><span>CHOOSE A DATA PATH</span></div>
+      <div class="overview-paths">
+        <a class="overview-path" href="#elections"><span class="path-icon blue">▥</span><span><b>Look back at elections</b><small>Compare results, winners and margins.</small></span><span class="path-arrow">↗</span></a>
+        <a class="overview-path" href="#constituencies"><span class="path-icon purple">⌖</span><span><b>Explore a constituency</b><small>Find a seat and open its profile.</small></span><span class="path-arrow">↗</span></a>
+        <a class="overview-path" href="#predictions"><span class="path-icon orange">◷</span><span><b>Look ahead to 2027</b><small>Review scenarios and assumptions.</small></span><span class="path-arrow">↗</span></a>
+      </div>
+      <div class="overview-integrity"><span>✓</span><p><b>Built around clarity.</b> Verified results, sourced facts, estimates and political opinion should be clearly distinguished. Some charts and features are still prototype previews.</p></div>
+    </section>
+
+    <section class="search-band" id="constituencies">
+      <div class="search-copy"><span class="section-kicker">START EXPLORING</span><h2>Search any constituency</h2><p>Search an Assembly or Parliamentary seat, district, or 2017/2022 Assembly candidate.</p></div>
+      <div class="search-area">
+        <label class="search-box"><span class="search-icon">⌕</span><input id="globalSearch" type="search" placeholder="Search constituency or candidate name…" autocomplete="off"/><kbd>ENTER</kbd></label>
+        <div class="search-results" id="searchResults" hidden></div>
+        <div class="popular-searches"><span>POPULAR:</span><button data-search="Firozabad">Firozabad</button><button data-search="Sirsaganj">Sirsaganj</button><button data-search="Varanasi">Varanasi</button><button data-search="Agra">Agra</button><button data-search="Lucknow">Lucknow</button></div>
+      </div>
+    </section>
+
+    <section class="section-block" id="elections">
+      <div class="section-heading">
+        <div><span class="section-kicker">THE DATA DESK</span><h2>Election centre</h2><p>Explore the results that shape Uttar Pradesh politics.</p></div>
+        <a class="text-link" href="#election-grid">View all election data <span>↗</span></a>
+      </div>
+      <div class="election-grid" id="election-grid">
+        <article class="election-card featured">
+          <div class="card-topline"><span class="card-icon">▥</span><span class="tag tag-blue">ASSEMBLY</span></div>
+          <h3>Uttar Pradesh Assembly Results</h3><p>Compare party standings and vote shares, then explore candidate-wise results in all 403 constituencies.</p>
+          <div class="mini-chart" aria-label="Illustrative chart"><span style="height:66%"></span><span style="height:39%"></span><span style="height:20%"></span><span style="height:11%"></span><span style="height:8%"></span><span style="height:5%"></span><span style="height:4%"></span><span style="height:3%"></span><span style="height:2%"></span><span style="height:2%"></span><span style="height:1%"></span><span style="height:1%"></span></div>
+          <div class="card-footer"><span>403 constituencies</span><button class="arrow-btn" data-modal="Uttar Pradesh Assembly Results" aria-label="Explore Assembly results">↗</button></div>
+        </article>
+        <article class="election-card">
+          <div class="card-topline"><span class="card-icon gold">▤</span><span class="tag tag-gold">PARLIAMENT</span></div>
+          <h3>Uttar Pradesh Parliamentary Results</h3><p>Compare party seats, vote shares and candidate results across all 80 Lok Sabha constituencies.</p>
+          <div class="card-metric"><strong>80</strong><span>parliamentary<br/>constituencies</span></div>
+          <div class="card-footer"><span>Compare election years</span><button class="arrow-btn" data-modal="Uttar Pradesh Parliamentary Results" aria-label="Explore Uttar Pradesh parliamentary results">↗</button></div>
+        </article>
+        <article class="election-card">
+          <div class="card-topline"><span class="card-icon green">⌂</span><span class="tag tag-green">LOCAL GOVERNMENT</span></div>
+          <div class="card-year">LOCAL</div><h3>Municipal & Panchayat</h3><p>Urban local bodies and rural local elections, organized by district and local-body type.</p>
+          <div class="local-chips" role="group" aria-label="Choose local election results">
+            <button type="button" data-local-body="nagar-nigam">Nagar Nigam</button>
+            <button type="button" data-local-body="nagar-palika">Nagar Palika</button>
+            <button type="button" data-local-body="gram-panchayat">Gram Panchayat</button>
+          </div>
+          <div class="card-footer"><span>Local democracy</span><button class="arrow-btn" data-modal="Local Election Results" aria-label="Explore local results">↗</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="forecast-section" id="predictions">
+      <div class="forecast-pattern"></div>
+      <div class="forecast-copy"><span class="section-kicker light-kicker">LOOKING AHEAD</span><h2>2027 Assembly<br/><em>Forecast desk.</em></h2><p>Explore constituency-level scenarios, close contests and possible swings—with transparent assumptions, not claims of certainty.</p><a class="btn btn-light" href="#forecast-preview" id="forecastBtn">Explore forecast concept <span>↗</span></a></div>
+      <div class="forecast-preview" id="forecast-preview">
+        <div class="forecast-top"><span>UP ASSEMBLY · 2027</span><span class="forecast-status">CONCEPT PREVIEW</span></div>
+        <div class="forecast-big"><span>403</span><span class="forecast-big-label">SEATS TO WATCH</span></div>
+        <div class="forecast-line"></div>
+        <div class="forecast-stats"><div><small>Constituency outlook</small><b>Seat-by-seat</b></div><div><small>Scenario analysis</small><b>Assumptions visible</b></div></div>
+        <div class="forecast-disclaimer">Forecasts are estimates, not official results. This panel contains no actual 2027 predictions.</div>
+      </div>
+    </section>
+
+    <section class="section-block lower-grid-section" id="forum">
+      <div class="section-heading">
+        <div><span class="section-kicker">MORE THAN RESULTS</span><h2>Explore the landscape</h2><p>From local issues to informed public discussion.</p></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon purple">◎</div><h3>Constituency profiles</h3><p>History, key issues, previous winners and constituency-level research in one place.</p><a href="#constituencies" class="text-link">Explore profiles ↗</a></article>
+        <article class="feature-card"><div class="feature-icon orange">▧</div><h3>Issues & social context</h3><p>Source-linked research, clearly separated from estimates, opinion and unverified claims.</p><a href="#constituencies" class="text-link">Read the methodology ↗</a></article>
+        <article class="feature-card"><div class="feature-icon green">◌</div><h3>Political discussion</h3><p>A future forum for discussing local issues, election analysis and public policy respectfully.</p><button class="text-link link-button" data-modal="Political Discussion Forum">Preview the forum ↗</button></article>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-mark">P<span>·</span></div>
+      <div class="newsletter-copy"><span class="section-kicker">THE POLITO PURPOSE</span><h2>Better questions.<br/>Clearer political data.</h2></div>
+      <p>Politics is easier to understand when information is organised, comparable and transparent. That is the idea behind POLITO.</p>
+      <a href="#overview" class="btn btn-dark">Back to overview ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#overview"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-copy"><strong>POLITO</strong><small>INDIA'S OWN POLITICAL DATA CENTER</small></span></a>
+    <div class="footer-note">Phase 01: Uttar Pradesh <span>·</span> A concept frontend prototype</div>
+    <div class="footer-right">Independent platform concept <span>©</span> 2026</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="infoDialog" class="info-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close dialog">×</button>
+    <div class="dialog-icon">↗</div><span class="section-kicker">POLITO PREVIEW</span>
+    <h2 id="dialogTitle">Coming soon</h2>
+    <p id="dialogText">This section is part of the frontend concept. We'll connect it to verified data in the next stage.</p>
+    <button class="btn btn-dark" id="dialogOk">Got it</button>
+  </dialog>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/election-results.js"></script>
+  <script src="js/local-election-results.js"></script>
+  <script src="js/constituency-search.js"></script>
+  <script src="js/district-dashboard.js"></script>
+  <script src="js/assembly-result-profile.js"></script>
+  <script src="js/parliamentary-profiles.js"></script>
+</body>
+</html>

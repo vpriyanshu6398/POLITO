@@ -1,0 +1,419 @@
+{
+  "election": "Uttar Pradesh Gram Panchayat Pradhan candidates",
+  "year": 2021,
+  "source": "Project-provided Parquet dataset: gram_panchayat_head_candidate_record.parquet",
+  "districtCount": 67,
+  "expectedStateDistrictCount": 75,
+  "recordCount": 373096,
+  "resultLabels": [
+    "Winner",
+    "Runner-up",
+    "Candidate"
+  ],
+  "recordsByDistrict": [
+    {
+      "name": "Agra",
+      "slug": "agra",
+      "records": 3797,
+      "file": "agra.json.gz"
+    },
+    {
+      "name": "Aligarh",
+      "slug": "aligarh",
+      "records": 3151,
+      "file": "aligarh.json.gz"
+    },
+    {
+      "name": "Ambedkar Nagar",
+      "slug": "ambedkar-nagar",
+      "records": 6441,
+      "file": "ambedkar-nagar.json.gz"
+    },
+    {
+      "name": "Amethi",
+      "slug": "amethi",
+      "records": 5249,
+      "file": "amethi.json.gz"
+    },
+    {
+      "name": "Amroha",
+      "slug": "amroha",
+      "records": 4966,
+      "file": "amroha.json.gz"
+    },
+    {
+      "name": "Azamgarh",
+      "slug": "azamgarh",
+      "records": 9945,
+      "file": "azamgarh.json.gz"
+    },
+    {
+      "name": "Bagpat",
+      "slug": "bagpat",
+      "records": 1779,
+      "file": "bagpat.json.gz"
+    },
+    {
+      "name": "Bahraich",
+      "slug": "bahraich",
+      "records": 6921,
+      "file": "bahraich.json.gz"
+    },
+    {
+      "name": "Baliya",
+      "slug": "baliya",
+      "records": 7168,
+      "file": "baliya.json.gz"
+    },
+    {
+      "name": "Balrampur",
+      "slug": "balrampur",
+      "records": 5471,
+      "file": "balrampur.json.gz"
+    },
+    {
+      "name": "Banda",
+      "slug": "banda",
+      "records": 5544,
+      "file": "banda.json.gz"
+    },
+    {
+      "name": "Bareilly",
+      "slug": "bareilly",
+      "records": 8937,
+      "file": "bareilly.json.gz"
+    },
+    {
+      "name": "Basti",
+      "slug": "basti",
+      "records": 7550,
+      "file": "basti.json.gz"
+    },
+    {
+      "name": "Budaun",
+      "slug": "budaun",
+      "records": 7013,
+      "file": "budaun.json.gz"
+    },
+    {
+      "name": "Bulandshahr",
+      "slug": "bulandshahr",
+      "records": 5276,
+      "file": "bulandshahr.json.gz"
+    },
+    {
+      "name": "Chandauli",
+      "slug": "chandauli",
+      "records": 4532,
+      "file": "chandauli.json.gz"
+    },
+    {
+      "name": "Chitrakoot",
+      "slug": "chitrakoot",
+      "records": 3445,
+      "file": "chitrakoot.json.gz"
+    },
+    {
+      "name": "Devaria",
+      "slug": "devaria",
+      "records": 7465,
+      "file": "devaria.json.gz"
+    },
+    {
+      "name": "Eta",
+      "slug": "eta",
+      "records": 5846,
+      "file": "eta.json.gz"
+    },
+    {
+      "name": "Farrukhabad",
+      "slug": "farrukhabad",
+      "records": 5672,
+      "file": "farrukhabad.json.gz"
+    },
+    {
+      "name": "Fatehpur",
+      "slug": "fatehpur",
+      "records": 7646,
+      "file": "fatehpur.json.gz"
+    },
+    {
+      "name": "Firozabad",
+      "slug": "firozabad",
+      "records": 5122,
+      "file": "firozabad.json.gz"
+    },
+    {
+      "name": "Gautam Buddha Nagar",
+      "slug": "gautam-buddha-nagar",
+      "records": 456,
+      "file": "gautam-buddha-nagar.json.gz"
+    },
+    {
+      "name": "Ghaziabad",
+      "slug": "ghaziabad",
+      "records": 1136,
+      "file": "ghaziabad.json.gz"
+    },
+    {
+      "name": "Ghazipur",
+      "slug": "ghazipur",
+      "records": 8511,
+      "file": "ghazipur.json.gz"
+    },
+    {
+      "name": "Gonda",
+      "slug": "gonda",
+      "records": 7854,
+      "file": "gonda.json.gz"
+    },
+    {
+      "name": "Gorakhpur",
+      "slug": "gorakhpur",
+      "records": 7811,
+      "file": "gorakhpur.json.gz"
+    },
+    {
+      "name": "Hamirpur",
+      "slug": "hamirpur",
+      "records": 3763,
+      "file": "hamirpur.json.gz"
+    },
+    {
+      "name": "Hapur",
+      "slug": "hapur",
+      "records": 1927,
+      "file": "hapur.json.gz"
+    },
+    {
+      "name": "Hardoi",
+      "slug": "hardoi",
+      "records": 8671,
+      "file": "hardoi.json.gz"
+    },
+    {
+      "name": "Hathras",
+      "slug": "hathras",
+      "records": 3599,
+      "file": "hathras.json.gz"
+    },
+    {
+      "name": "Itawah",
+      "slug": "itawah",
+      "records": 4139,
+      "file": "itawah.json.gz"
+    },
+    {
+      "name": "Jalaun",
+      "slug": "jalaun",
+      "records": 4867,
+      "file": "jalaun.json.gz"
+    },
+    {
+      "name": "Jaunpur",
+      "slug": "jaunpur",
+      "records": 9793,
+      "file": "jaunpur.json.gz"
+    },
+    {
+      "name": "Jhanshi",
+      "slug": "jhanshi",
+      "records": 3920,
+      "file": "jhanshi.json.gz"
+    },
+    {
+      "name": "Kannauj",
+      "slug": "kannauj",
+      "records": 3973,
+      "file": "kannauj.json.gz"
+    },
+    {
+      "name": "Kanpur Dehat",
+      "slug": "kanpur-dehat",
+      "records": 5744,
+      "file": "kanpur-dehat.json.gz"
+    },
+    {
+      "name": "Kanpur Nagar",
+      "slug": "kanpur-nagar",
+      "records": 4458,
+      "file": "kanpur-nagar.json.gz"
+    },
+    {
+      "name": "Kasganj",
+      "slug": "kasganj",
+      "records": 4112,
+      "file": "kasganj.json.gz"
+    },
+    {
+      "name": "Kaushambi",
+      "slug": "kaushambi",
+      "records": 4558,
+      "file": "kaushambi.json.gz"
+    },
+    {
+      "name": "Kushinagar",
+      "slug": "kushinagar",
+      "records": 6697,
+      "file": "kushinagar.json.gz"
+    },
+    {
+      "name": "Lakhimpur Khiri",
+      "slug": "lakhimpur-khiri",
+      "records": 6995,
+      "file": "lakhimpur-khiri.json.gz"
+    },
+    {
+      "name": "Lalitpur",
+      "slug": "lalitpur",
+      "records": 3623,
+      "file": "lalitpur.json.gz"
+    },
+    {
+      "name": "Lucknow",
+      "slug": "lucknow",
+      "records": 2400,
+      "file": "lucknow.json.gz"
+    },
+    {
+      "name": "Maharajganj",
+      "slug": "maharajganj",
+      "records": 5667,
+      "file": "maharajganj.json.gz"
+    },
+    {
+      "name": "Mahoba",
+      "slug": "mahoba",
+      "records": 2730,
+      "file": "mahoba.json.gz"
+    },
+    {
+      "name": "Mainpuri",
+      "slug": "mainpuri",
+      "records": 4669,
+      "file": "mainpuri.json.gz"
+    },
+    {
+      "name": "Meerut",
+      "slug": "meerut",
+      "records": 3248,
+      "file": "meerut.json.gz"
+    },
+    {
+      "name": "Mirzapur",
+      "slug": "mirzapur",
+      "records": 5615,
+      "file": "mirzapur.json.gz"
+    },
+    {
+      "name": "Muradabad",
+      "slug": "muradabad",
+      "records": 6694,
+      "file": "muradabad.json.gz"
+    },
+    {
+      "name": "Pilibhit",
+      "slug": "pilibhit",
+      "records": 4448,
+      "file": "pilibhit.json.gz"
+    },
+    {
+      "name": "Pratapgarh",
+      "slug": "pratapgarh",
+      "records": 10673,
+      "file": "pratapgarh.json.gz"
+    },
+    {
+      "name": "Prayagraj",
+      "slug": "prayagraj",
+      "records": 9189,
+      "file": "prayagraj.json.gz"
+    },
+    {
+      "name": "Rae bareli",
+      "slug": "rae-bareli",
+      "records": 5936,
+      "file": "rae-bareli.json.gz"
+    },
+    {
+      "name": "Rampur",
+      "slug": "rampur",
+      "records": 5828,
+      "file": "rampur.json.gz"
+    },
+    {
+      "name": "Saharanpur",
+      "slug": "saharanpur",
+      "records": 6010,
+      "file": "saharanpur.json.gz"
+    },
+    {
+      "name": "Sambhal",
+      "slug": "sambhal",
+      "records": 5745,
+      "file": "sambhal.json.gz"
+    },
+    {
+      "name": "Sant Kabir Nagar",
+      "slug": "sant-kabir-nagar",
+      "records": 4507,
+      "file": "sant-kabir-nagar.json.gz"
+    },
+    {
+      "name": "Shahjahnapur",
+      "slug": "shahjahnapur",
+      "records": 7662,
+      "file": "shahjahnapur.json.gz"
+    },
+    {
+      "name": "Shamli",
+      "slug": "shamli",
+      "records": 2286,
+      "file": "shamli.json.gz"
+    },
+    {
+      "name": "Shravasti",
+      "slug": "shravasti",
+      "records": 2675,
+      "file": "shravasti.json.gz"
+    },
+    {
+      "name": "Siddharth Nagar",
+      "slug": "siddharth-nagar",
+      "records": 7053,
+      "file": "siddharth-nagar.json.gz"
+    },
+    {
+      "name": "Sitapur",
+      "slug": "sitapur",
+      "records": 10085,
+      "file": "sitapur.json.gz"
+    },
+    {
+      "name": "Sonbhadra",
+      "slug": "sonbhadra",
+      "records": 5533,
+      "file": "sonbhadra.json.gz"
+    },
+    {
+      "name": "Sultanpur",
+      "slug": "sultanpur",
+      "records": 8253,
+      "file": "sultanpur.json.gz"
+    },
+    {
+      "name": "Unnao",
+      "slug": "unnao",
+      "records": 6075,
+      "file": "unnao.json.gz"
+    },
+    {
+      "name": "Varanasi",
+      "slug": "varanasi",
+      "records": 4572,
+      "file": "varanasi.json.gz"
+    }
+  ],
+  "coverageNote": "The dataset contains records from 67 of 75 Uttar Pradesh districts. The source vote_percentage column did not have a verifiable percentage scale and is omitted. Personal, property, and criminal-history fields were excluded.",
+  "storageFormat": "Gzip-compressed UTF-8 JSON district shards decoded by the browser"
+}

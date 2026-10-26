@@ -1,0 +1,9 @@
+{
+  "name": "polito-local-preview",
+  "version": "1.0.0",
+  "private": true,
+  "description": "POLITO frontend preview server",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
